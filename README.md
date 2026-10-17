@@ -134,6 +134,8 @@ merges = rustminibpe.train_on_text("hello hello world", r"\s+|.", 260)
 
 ordered = [pair for pair, _count in merges]
 encoder = rustminibpe.RustEncoder(r"\s+|.", ordered)
+encoder.encode_ordinary("hello world")
+```
 
 ## API
 
@@ -236,5 +238,3 @@ MIT. Portions are derived from
 [tiktoken](https://github.com/openai/tiktoken)'s GPT-2/GPT-4 split patterns.
 See [LICENSE](LICENSE).
 
-encoder.encode_ordinary("hello world")   # [ ... ]
-```
