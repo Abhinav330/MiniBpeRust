@@ -1,0 +1,43 @@
+# Rust build output
+/target
+Cargo.lock.orig
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Native extensions and debug symbols built in place
+*.so
+*.pyd
+*.dylib
+*.pdb
+
+# Local build/test logs
+build.log
+build.err
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Distribution / packaging
+build/
+dist/
+wheels/
+*.egg-info/
+.eggs/
+
+# Editors and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Trained tokenizer models are not part of this library
+*.model
+*.vocab

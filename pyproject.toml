@@ -1,0 +1,56 @@
+[build-system]
+requires = ["maturin>=1.15,<2.0"]
+build-backend = "maturin"
+
+[project]
+name = "MiniBpeRust"
+description = "minbpe's byte-level BPE tokenizers, with training and encoding in Rust"
+readme = "README.md"
+requires-python = ">=3.9"
+dynamic = ["version"]
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [
+    { name = "Abhinav", email = "tech@studym8.ai" },
+]
+keywords = [
+    "bpe",
+    "tokenizer",
+    "tokenization",
+    "nlp",
+    "llm",
+    "minbpe",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Rust",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = [
+    "regex>=2024.4.16",
+]
+[project.optional-dependencies]
+gpt4 = ["tiktoken>=0.7.0"]
+dev = ["pytest>=8.0"]
+
+[project.urls]
+Homepage = "https://github.com/Abhinav330/MiniBpeRust"
+Repository = "https://github.com/Abhinav330/MiniBpeRust"
+Issues = "https://github.com/Abhinav330/MiniBpeRust/issues"
+Changelog = "https://github.com/Abhinav330/MiniBpeRust/blob/main/CHANGELOG.md"
+
+[tool.maturin]
+python-source = "python"
+module-name = "MiniBpeRust.rustminibpe"
+features = ["pyo3/extension-module"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
