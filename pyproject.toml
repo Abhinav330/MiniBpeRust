@@ -11,7 +11,7 @@ dynamic = ["version"]
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [
-    { name = "Abhinav", email = "tech@studym8.ai" },
+    { name = "Abhinav", email = "abhinav33303@gmail.com" },
 ]
 keywords = [
     "bpe",
